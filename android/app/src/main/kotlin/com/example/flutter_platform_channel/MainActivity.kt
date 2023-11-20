@@ -35,7 +35,12 @@ class MainActivity : FlutterActivity() {
     // Pigeon
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-        MessageApi.setUp(flutterEngine.dartExecutor.binaryMessenger, MyMessageApi());
+        MessageApi.setUp(flutterEngine.dartExecutor.binaryMessenger, MyMessageApi())
+        flutterEngine
+            .platformViewsController
+            .registry
+            .registerViewFactory("NativeViewType",
+                NativeViewFactory())
     }
 
     override fun onDestroy() {

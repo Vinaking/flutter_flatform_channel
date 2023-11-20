@@ -3,6 +3,7 @@ import 'package:flutter_platform_channel/channel/basic_channel.dart';
 import 'package:flutter_platform_channel/channel/event_channel.dart';
 import 'package:flutter_platform_channel/channel/method_channel.dart';
 import 'package:flutter_platform_channel/pigeon/messaging_page.dart';
+import 'package:flutter_platform_channel/view/native_view_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MessagingPage(),
+      home: const NativeViewPage(),
     );
   }
 }
